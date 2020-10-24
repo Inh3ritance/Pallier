@@ -1,2 +1,2 @@
 # Pallier
-Test out Secuirty and usage of Pallier
+Test out Security and usage of Pallier

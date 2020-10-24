@@ -75,7 +75,6 @@ class App extends React.Component {
   }
 
   render(){
-    console.log(this.state.key_size);
     return (
         <div className="App">
           <header className="App-header">
@@ -85,8 +84,8 @@ class App extends React.Component {
             <div>
               <p className='side push'>Key Size({this.state.key_size}):</p>
               <input type="range" min="1" max="3720" step="1" value={this.state.key_size}
-               class="slider" id="myRange" onChange={e => {
-                const x = parseInt(e.target.value, 10);
+                className="slider" id="myRange" onChange={(ev) => {
+                const x = parseInt(ev.target.value, 10);
                 this.setState({key_size: x});
               }}/>
             </div>

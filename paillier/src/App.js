@@ -15,6 +15,7 @@ class App extends React.Component {
         c2: 0,
         c3: 0,
         d: 0,
+        key_size:400,
     }
     this.handleChangem1 = this.handleChangem1.bind(this);
     this.handleChangem2 = this.handleChangem2.bind(this);
@@ -29,7 +30,10 @@ class App extends React.Component {
   }
 
   generate_key = async()=> {
-    const { publicKey, privateKey } = await paillierBigint.generateRandomKeys(12);
+
+    console.time();
+
+    const { publicKey, privateKey } = await paillierBigint.generateRandomKeys(this.state.key_size);
     
     this.setState({ publicKey: { n: publicKey.n, g:publicKey.g } });
     this.setState({ privateKey: { lambda: privateKey.lambda, privateKey: privateKey.mu, publicKey: this.state.publicKey } });
@@ -59,20 +63,33 @@ class App extends React.Component {
       // Decrypt c3
       const d = privateKey.decrypt(encryptedMul);
       this.setState({d:d});
+
+      console.timeEnd();
     } else {
       this.setState({c1: 0});
       this.setState({c2: 0});
+      this.setState({c3: 0});
+      this.setState({d: 0});
     }
+      console.timeEnd();
   }
 
   render(){
-
+    console.log(this.state.key_size);
     return (
         <div className="App">
           <header className="App-header">
             <h1>Paillier Demo CS 3180</h1>
             <p className='side'>Message 1:</p><input type="number" onClick={this.handleChangem1} className='side'/>
             <p className='side'>Message 2:</p><input type="number" onClick={this.handleChangem2} className='side'/>
+            <div>
+              <p className='side push'>Key Size({this.state.key_size}):</p>
+              <input type="range" min="1" max="3720" step="1" value={this.state.key_size}
+               class="slider" id="myRange" onChange={e => {
+                const x = parseInt(e.target.value, 10);
+                this.setState({key_size: x});
+              }}/>
+            </div>
             <div>
               <h4 className='side push'>Generate Key:</h4>
               <button onClick={this.generate_key} className='side'>press me</button>

@@ -2,12 +2,19 @@
   text-align: center;
 }
 
-.side{
+.side {
   display:inline-block !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.push{
-  padding-right: 10px;
+.push {
+  padding-right: 5px;
+}
+
+p {
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {

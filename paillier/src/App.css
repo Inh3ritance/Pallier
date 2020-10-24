@@ -12,9 +12,9 @@
   padding-right: 5px;
 }
 
-p {
-  white-space: nowrap;
-  overflow: hidden;
+.sol{
+  width: 140px;
+  word-break: break-all;
 }
 
 @media (prefers-reduced-motion: no-preference) {

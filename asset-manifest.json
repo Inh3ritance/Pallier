@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Pallier/static/css/main.4b2ef2fe.chunk.css",
-    "main.js": "/Pallier/static/js/main.b21831db.chunk.js",
-    "main.js.map": "/Pallier/static/js/main.b21831db.chunk.js.map",
+    "main.js": "/Pallier/static/js/main.ff9e9619.chunk.js",
+    "main.js.map": "/Pallier/static/js/main.ff9e9619.chunk.js.map",
     "runtime-main.js": "/Pallier/static/js/runtime-main.f2dd6766.js",
     "runtime-main.js.map": "/Pallier/static/js/runtime-main.f2dd6766.js.map",
     "static/js/2.49ba10e3.chunk.js": "/Pallier/static/js/2.49ba10e3.chunk.js",
     "static/js/2.49ba10e3.chunk.js.map": "/Pallier/static/js/2.49ba10e3.chunk.js.map",
     "index.html": "/Pallier/index.html",
-    "precache-manifest.d170ca6065a398d6380a45a784a669f3.js": "/Pallier/precache-manifest.d170ca6065a398d6380a45a784a669f3.js",
+    "precache-manifest.50d7ef6984d9a1a13001206512451c31.js": "/Pallier/precache-manifest.50d7ef6984d9a1a13001206512451c31.js",
     "service-worker.js": "/Pallier/service-worker.js",
     "static/css/main.4b2ef2fe.chunk.css.map": "/Pallier/static/css/main.4b2ef2fe.chunk.css.map",
     "static/js/2.49ba10e3.chunk.js.LICENSE.txt": "/Pallier/static/js/2.49ba10e3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f2dd6766.js",
     "static/js/2.49ba10e3.chunk.js",
     "static/css/main.4b2ef2fe.chunk.css",
-    "static/js/main.b21831db.chunk.js"
+    "static/js/main.ff9e9619.chunk.js"
   ]
 }

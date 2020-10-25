@@ -34,45 +34,47 @@ class App extends React.Component {
 
     console.time();
 
-    const { publicKey, privateKey } = await paillierBigint.generateRandomKeys(this.state.key_size);
-    
-    this.setState({ publicKey: { n: publicKey.n, g:publicKey.g } });
-    this.setState({ privateKey: { lambda: privateKey.lambda, privateKey: privateKey.mu, publicKey: this.state.publicKey } });
+    try{
+      const { publicKey, privateKey } = await paillierBigint.generateRandomKeys(this.state.key_size);
+      this.setState({ publicKey: { n: publicKey.n, g:publicKey.g } });
+      this.setState({ privateKey: { lambda: privateKey.lambda, privateKey: privateKey.mu, publicKey: this.state.publicKey } });
   
-    if(this.state.m1 > 0  && this.state.m2 > 0){
-      // Do not remove BigInt comments below!!! //
-      /* global BigInt */
-      const m1 = BigInt(this.state.m1);
-      const m2 = BigInt(this.state.m2);
-    
-      // encryption/decryption
-      const c1 = publicKey.encrypt(m1)
-      this.setState({c1: c1});
-      //console.log(privateKey.decrypt(c1)) // 12345678901234567890n
-    
-      // homomorphic addition of two ciphertexts (encrypted numbers)
-      const c2 = publicKey.encrypt(m2)
-      this.setState({c2:c2});
+      if(this.state.m1 > 0  && this.state.m2 > 0){
+        // Do not remove BigInt comments below!!! //
+        /* global BigInt */
+        const m1 = BigInt(this.state.m1);
+        const m2 = BigInt(this.state.m2);
+      
+        // encryption/decryption
+        const c1 = publicKey.encrypt(m1)
+        this.setState({c1: c1});
+        //console.log(privateKey.decrypt(c1)) // 12345678901234567890n
+      
+        // homomorphic addition of two ciphertexts (encrypted numbers)
+        const c2 = publicKey.encrypt(m2)
+        this.setState({c2:c2});
 
-      const encryptedSum = publicKey.addition(c1, c2)
-      //console.log(privateKey.decrypt(encryptedSum)) // m1 + m2 = 12345678901234567895n
-    
-      // multiplication by 2n
-      const encryptedMul = publicKey.multiply(encryptedSum, 2n);
-      this.setState({c3: encryptedMul});
+        const encryptedSum = publicKey.addition(c1, c2)
+        //console.log(privateKey.decrypt(encryptedSum)) // m1 + m2 = 12345678901234567895n
+      
+        // multiplication by 2n
+        const encryptedMul = publicKey.multiply(encryptedSum, 2n);
+        this.setState({c3: encryptedMul});
 
-      // Decrypt c3
-      const d = privateKey.decrypt(encryptedMul);
-      this.setState({d:d});
+        // Decrypt c3
+        const d = privateKey.decrypt(encryptedMul);
+        this.setState({d:d});
 
-      console.timeEnd();
-    } else {
-      this.setState({c1: 0});
-      this.setState({c2: 0});
-      this.setState({c3: 0});
-      this.setState({d: 0});
+        console.timeEnd();
+      } else {
+        this.setState({c1: 0});
+        this.setState({c2: 0});
+        this.setState({c3: 0});
+        this.setState({d: 0});
+      } console.timeEnd();
+    } catch(e){
+      throw(e);
     }
-      console.timeEnd();
   }
 
   render(){

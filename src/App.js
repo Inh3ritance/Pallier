@@ -19,6 +19,7 @@ class App extends React.Component {
     }
     this.handleChangem1 = this.handleChangem1.bind(this);
     this.handleChangem2 = this.handleChangem2.bind(this);
+    this.generate_key = this.generate_key.bind(this);
   }
 
   handleChangem1(ev){
@@ -29,7 +30,7 @@ class App extends React.Component {
     this.setState({m2: ev.currentTarget.value});
   }
 
-  generate_key = async()=> {
+  async generate_key(){
 
     console.time();
 

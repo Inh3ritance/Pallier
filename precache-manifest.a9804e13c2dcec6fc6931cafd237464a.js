@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0db82545b70d12614275cf72bb9ad4f6",
+    "revision": "f2efd99e7fcc04e6f0879633a2d256cf",
     "url": "/Pallier/index.html"
   },
   {
-    "revision": "2968c6bd4190cb6ce562",
+    "revision": "94f75dfc87d51e81ca46",
     "url": "/Pallier/static/css/main.4b2ef2fe.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Pallier/static/js/2.49ba10e3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2968c6bd4190cb6ce562",
-    "url": "/Pallier/static/js/main.fb02f442.chunk.js"
+    "revision": "94f75dfc87d51e81ca46",
+    "url": "/Pallier/static/js/main.22eb3689.chunk.js"
   },
   {
     "revision": "232640421e75072187c4",

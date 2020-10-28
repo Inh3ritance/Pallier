@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1a61d9c3c645c21dae5319863659859",
+    "revision": "2b477259f02fcee3be0d07694575c50c",
     "url": "/paillier/index.html"
   },
   {
-    "revision": "f1ea62b419512dc94f33",
-    "url": "/paillier/static/css/main.4b2ef2fe.chunk.css"
+    "revision": "14eb0a55ecfe571882be",
+    "url": "/paillier/static/css/main.ec892702.chunk.css"
   },
   {
     "revision": "71287b28d549ccdb4577",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/paillier/static/js/2.0eba2080.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f1ea62b419512dc94f33",
+    "revision": "14eb0a55ecfe571882be",
     "url": "/paillier/static/js/main.20f34d42.chunk.js"
   },
   {

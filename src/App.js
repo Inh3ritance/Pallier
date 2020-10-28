@@ -78,7 +78,7 @@ class App extends React.Component {
     return (
         <div className="App">
           <header className="App-header">
-            <h1>Paillier Demo CS 3180</h1>
+            <h1>Paillier Demo CS 4600</h1>
             <p className='side'>Message 1:</p><input type="number" onClick={this.handleChangem1} className='side'/>
             <p className='side'>Message 2:</p><input type="number" onClick={this.handleChangem2} className='side'/>
             <div>

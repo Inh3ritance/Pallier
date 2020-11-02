@@ -33,7 +33,7 @@ class App extends React.Component {
   async generate_key(){
 
     console.time();
-    const { publicKey, privateKey } = await paillierBigint.generateRandomKeys(this.state.key_size).catch(e => {console.log(e)});
+    const { publicKey, privateKey } = await paillierBigint.generateRandomKeysSync(this.state.key_size);
     
     this.setState({ publicKey: { n: publicKey.n, g:publicKey.g } });
     this.setState({ privateKey: { lambda: privateKey.lambda, privateKey: privateKey.mu, publicKey: this.state.publicKey } });
